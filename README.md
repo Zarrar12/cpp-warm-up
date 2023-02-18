@@ -5,7 +5,7 @@ To create a static library and link it with the main source code, do the followi
     This will produce the object file tools.o
 
 2. Organize modules into libraries:
-    ar rcs libtools.a tools.o <other_modules>
+    ar rcs libmytools.a tools.o <other_modules>
     The archiver takes the module tools.o and creates a static library named libtools.a
     It is important to start the library name with 'lib'
 
@@ -14,6 +14,6 @@ To create a static library and link it with the main source code, do the followi
     This will produce main.o
 
 4. Link main application with the libraries:
-    g++ -std=c++17 main.o -L . -ltools -o main
+    g++ -std=c++17 main.o -L . -lmytools -o main
     -L = To indicate the path of the library to the linker
-    -ltools = To tell the linker to link against the libtools.a library
+    -lmytools = To tell the linker to link against the libmytools.a library
