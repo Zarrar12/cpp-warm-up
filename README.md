@@ -28,3 +28,13 @@ a. Manual Method:
     Method-2:   Place the *.so file in /usr/lib/
     a) cp from/the/folder/*.so /usr/lib/
     b) g++ main.o -ltools -o main
+
+b. Automated Method:
+
+add_library(tools SHARED tools.cpp) This statement creates the object file of tools.cpp and also generates the dynamic library using tools.o. This means that steps 1 and 2 have combined in this.
+
+add_executable(main main.cpp) Similar to step 3 of manual method.
+
+target_link_libraries(main tools) Similar to step 4 of manual method.
+
+To use this method create 'build' folder in the project directory, cd to the driectory and run 'cmake ../' and then 'make'.
