@@ -22,8 +22,8 @@ a. Manual Method:
     a) pwd to get the /path/to/the/library
     b) export LD_LIBRARY_PATH=:/path/to/the/library
     C) g++ -std=c++17 main.o -L . -lmytools -o main
-    -L = To indicate the path of the library to the linker
-    -lmytools = To tell the linker to link against the libmytools.a library
+        -L = To indicate the path of the library to the linker
+        -lmytools = To tell the linker to link against the libmytools.so library
 
     Method-2:   Place the *.so file in /usr/lib/
     a) cp from/the/folder/*.so /usr/lib/
